@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom/design.css">
+    <script src="js/custom/item.js"></script>
+    <script src="js/custom/itemoperations.js"></script>
+    <script src="js/custom/controller.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Item Details</legend>
+            <div class="form-group">
+                <label for="">Id</label>
+                <input type="text" placeholder="Type ItemId" id="itemid" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" placeholder="Type Name" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input type="range" min="0" max="100" step="10" id="price" class="form-control">
+                <output id="output"></output>    
+            </div>
+            <div class="form-group">
+                <label for="">Url</label>
+                <input type="text" placeholder="Type URL" id="url" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Color</label>
+                <input type="color" placeholder="Type Color" id="color" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Date</label>
+                <input type="date" id="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Desc</label>
+                <textarea id="desc" class="form-control" rows="10" cols="10" placeholder="Type Desc Here"></textarea>
+            </div>
+            <div class="form-group">
+                <button id="addBt" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
+                <button id="deleteBt" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</button>
+                <button id="searchidBt" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> &nbsp; Search by Id</button>
+                <button id="searchnameBt" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> &nbsp; Search by Name</button>
+                <button id="updateBt" class="btn btn-warning"><span class="glyphicon glyphicon-repeat"></span> &nbsp; Update </button>
+                <button id="sortidBt" class="btn btn-info"><span class="glyphicon glyphicon-sort-by-order"></span> &nbsp; Sort By ID </button>
+                <button id="sortnameBt"class="btn btn-info"><span class="glyphicon glyphicon-sort-by-alphabet"></span> &nbsp; Sort By Name </button>
+                <button id="saveBt" class="btn btn-success"><span class="glyphicon glyphicon-save"></span> &nbsp; Save </button>
+                <button id="loadBt" class="btn btn-primary"><span class="glyphicon glyphicon-upload"></span> &nbsp; Load</button>
+                <button id="loadfromserverBt" class="btn btn-info"><span class="glyphicon glyphicon-upload"></span> &nbsp; Load All</button>
+                <button id="clearBt" class="btn btn-default"><span class="glyphicon glyphicon-remove-sign"></span> &nbsp; Clear All</button>
+
+            </div>
+        </fieldset>
+        <h3>Total Records are:: <span id="total">0</span> &nbsp;&nbsp; Mark:: <span id="markrecord">0</span> UnMark :: <span id="unmark">0</span></h3>
+        <fieldset>
+            <legend>Item List</legend>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Desc</td>
+                        <td>Price</td>
+                        <td>Color</td>
+                        <td>URL</td>
+                        <td>Date</td>
+                        <td>Operations</td>
+                    </tr>
+                </thead>
+                <tbody id="itemtable">
+
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</body>
+
+</html>
